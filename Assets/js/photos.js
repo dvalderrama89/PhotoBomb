@@ -9,9 +9,11 @@ function fetchPhotos() {
     .then(response => response.json())
     .then(data => {
         console.log(data)
-        for (let i = 0; i < data.length; i++) {
-            let cardElem = createImageElems(data[i].urls.regular);
-            $("#photoContainer").append(cardElem);
+        if (data.length > 1) {
+            for (let i = 0; i < 1; i++) {
+                let cardElem = createImageElems(data[i].urls.regular);
+                $("#photoContainer").append(cardElem);
+            }
         }
     });
 };
@@ -19,7 +21,7 @@ function fetchPhotos() {
 // TODO: need to resize the images before they get put in the card
 // so that they're uniform and also pull images from different categories
 function createImageElems(url) {
-    let cardContainer = $("<div>").addClass("col s12 m8 l3");
+    let cardContainer = $("<div>").addClass("col offset-s6 offset-l6"); // offset is used to center the image
 
     let cardElem = $("<div>").addClass("card");
     let imgContainer = $("<div>").addClass("card-image waves-effect waves-block waves-light");

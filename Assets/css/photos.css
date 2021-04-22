@@ -1,0 +1,12 @@
+#photoContainer > div {
+    width: 25%;
+    transform: translate(-50%, 0); /* Centers the images under the Photobomb title */
+}
+
+/* Prevents the Like/Dislike links going off of the card
+    on smaller screens */
+@media only screen and (max-width: 750px) {
+    #photoContainer > div {
+        width: auto;
+    }
+}
