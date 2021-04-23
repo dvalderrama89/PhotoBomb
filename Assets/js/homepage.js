@@ -1,9 +1,4 @@
 var startBtn = $(".start-btn"); // Targets the start button
-var searchBar = $(".search-bar"); // Targets the search bar
-
-$(document).ready(function(){ /* Initializes the side nav bar */
-    $('.sidenav').sidenav();
-  });
 
 var slider = $(".slider"); /* Initializes the main slider with these options */
 M.Slider.init(slider, {
