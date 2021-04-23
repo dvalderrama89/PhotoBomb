@@ -1,3 +1,20 @@
+/**
+ * 
+all slugs
+------
+    wallpapers
+    nature
+    people
+    architecture
+    current-events
+    business-work
+    experimental
+    fashion
+    film
+    health
+ */
+var slugs = ["nature", "people", "architecture", "fashion", "film"];
+
 $(function() {
     fetchPhotos(); // Currently fetches just the nature category
 });
@@ -18,8 +35,6 @@ function fetchPhotos() {
     });
 };
 
-// TODO: need to resize the images before they get put in the card
-// so that they're uniform and also pull images from different categories
 function createImageElems(url) {
     let cardContainer = $("<div>").addClass("col offset-s6 offset-l6"); // offset is used to center the image
 
