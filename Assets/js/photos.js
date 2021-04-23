@@ -28,11 +28,13 @@ var photoURLs = {
     "fashion": "",
     "film": ""
 }
+var slugIndex = 0;
 
 // Runs on page load
 $(function() {
     localStorage.setItem("weights", JSON.stringify(categoryWeights)); // Sets default weights
-    fetchPhotos("nature"); // Fetches the default category at position 0
+    photoURLs = (localStorage.getItem("photoURLs")) ? localStorage.getItem("photoURLs") : photoURLs;
+    fetchPhotos(slugs[slugIndex]); // Fetches the default category at position 0
 });
 
 // We need to know what category the image is from to weight the category appropriately.
@@ -41,11 +43,25 @@ $(function() {
 $(document).on('click','#likeButton',function() {
     categoryWeights[this.dataset.category] = 100;
     localStorage.setItem("weights", JSON.stringify(categoryWeights));
+
+    if (slugIndex < slugs.length-1) {
+        $("#photoContainer").empty();
+        fetchPhotos(slugs[++slugIndex]);
+    } else {
+        window.location = "./curated.html";
+    }
 });
 
 $(document).on('click','#dislikeButton',function() {
     categoryWeights[this.dataset.category] = 0;
     localStorage.setItem("weights", JSON.stringify(categoryWeights));
+
+    if (slugIndex < slugs.length-1) {
+        $("#photoContainer").empty();
+        fetchPhotos(slugs[++slugIndex]);
+    } else {
+        window.location = "./curated.html";
+    }
 });
 
 function fetchPhotos(slug) {
@@ -57,8 +73,8 @@ function fetchPhotos(slug) {
     let urlsObj = localStorage.getItem("photoURLs");
     if (urlsObj) {
         let parsedObj = JSON.parse(urlsObj);
-        if (parsedObj[slug].length > 0) {
-            console.log("already have the url");
+        if (parsedObj[slug] && parsedObj[slug].length > 0) {
+            console.log("already have the url for: ", slug);
             let cardElem = createImageElems(parsedObj[slug], slug);
             $("#photoContainer").append(cardElem);
             return;
