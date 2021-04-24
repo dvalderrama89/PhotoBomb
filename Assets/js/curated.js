@@ -20,7 +20,7 @@ $(function() {
 
 // Handles taking the user to the next page in the flow so they can download the image
 $(document).on("click", "img", function(e) {
-    localStorage.setItem("currentURL", $(this).attr("src"));
+    localStorage.setItem("selectedImageURL", $(this).attr("src"));
     window.location = "../pages/mainpage.html";
 });
 
