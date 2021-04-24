@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="This is project 1 for UCI Coding Boot Camp" />
+    <title>PhotoBomb</title>
+    <!-- Materialize framework -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href= "../Assets/css/reset.css" />
+    <link rel="stylesheet" href= "../Assets/css/style.css" />
+    <link rel="stylesheet" href= "../Assets/css/search.css" />
+</head>
+<body>
+    <nav> <!-- This nav bar will show fully on lg screens, and will be mobile-responsive on sml screens -->
+        <div class="nav-wrapper blue-grey lighten-5 navbar-fixed">
+          <a href="../index.html" class="brand-logo black-text center">PhotoBomb</a>
+          <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+          <ul class="right hide-on-med-and-down">
+            <li><a class="waves-effect black-text" href="categories.html">Categories</a></li>
+            <li><a class="waves-effect black-text" href="#">Likes</a></li>
+            <li><a class="waves-effect black-text" href="curated.html">Curated</a></li>
+            <li>
+                <form id="navForm"> <!-- This text box NEEDS the styling on the CSS page to be aligned -->
+                    <div class="input-field">
+                      <input id="navSearch" class= "search-bar" type="search" placeholder="Search"required>
+                      <label class="label-icon" for="search"><i class="material-icons black-text">search</i></label>
+                      <i class="material-icons">close</i>
+                    </div>
+                  </form>
+            </li> 
+          </ul>
+        </div>
+    </nav>
+    <ul class="sidenav" id="mobile-demo"> <!-- This is the side nav that will show on sml screens  -->
+        <li><a class="subheader">PhotoBomb</a></li>
+        <li><div class="divider"></div></li>
+        <li><a class="waves-effect" href="categories.html">Categories</a></li>
+        <li><a class="waves-effect" href="#">Likes</a></li>
+        <li><a class="waves-effect" href="curated.html">Curated</a></li>
+        <li>
+            <form id="sideForm"> 
+                <div class="input-field">
+                  <input id="sideSearch" class= "search-bar" type="search"required>
+                  <label class="label-icon" for="search"><i class="material-icons black-text">search</i></label>
+                  <i class="material-icons">close</i>
+                </div>
+            </form>
+        </li>
+    </ul>
+    <footer class="page-footer blue-grey lighten-5"> <!-- Footer -->
+      <div class="footer-copyright">
+          <div class="container black-text center">
+              © 2021 PhotoBomb
+          </div>
+      </div>
+    </footer>
+    <!-- JQUERY link and Materialize JS link -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src = "https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src = "../Assets/js/script.js"></script>
+    <script src = "../Assets/js/search.js"></script>
+</body>
+</html>
