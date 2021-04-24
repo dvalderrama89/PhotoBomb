@@ -21,7 +21,7 @@ $(function() {
 // Handles taking the user to the next page in the flow so they can download the image
 $(document).on("click", "img", function(e) {
     localStorage.setItem("selectedImageURL", $(this).attr("src"));
-    window.location = "../pages/mainpage.html";
+    window.location = "../pages/mainpicture.html";
 });
 
 // Handles sorting the categories by weight and displaying them in a grid to the user
