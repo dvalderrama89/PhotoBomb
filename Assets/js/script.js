@@ -10,13 +10,13 @@ navForm.on("submit", function(e) { // Saves the user input from nav bar into loc
     e.preventDefault();
     var navSearch = $("#navSearch").val(); 
     localStorage.setItem("search", navSearch);
-    window.location.replace("pages/search.html");
+    window.location.replace("search.html");
 })
 
 sideNavForm.on("submit", function(e) { // Saves the user input from side bar into local storage and redirects screen
     e.preventDefault();
     var sideSearch = $("#sideSearch").val(); 
     localStorage.setItem("search", sideSearch);
-    window.location.replace("pages/search.html");
+    window.location.replace("search.html");
 })
 /* Need to add #navForm, #sideForm, #navSearch, #sideSearch IDs to all HTML pages */
