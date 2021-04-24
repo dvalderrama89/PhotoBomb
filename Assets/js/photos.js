@@ -15,11 +15,11 @@ All slugs
  */
 var slugs = ["nature", "people", "architecture", "fashion", "film"];
 var categoryWeights = {
-    "nature": 100,
-    "people": 100,
-    "architecture": 100,
-    "fashion": 100,
-    "film": 100
+    nature: 100,
+    people: 100,
+    architecture: 100,
+    fashion: 100,
+    film: 100
 }
 var photoURLs = {
     "nature": "",
