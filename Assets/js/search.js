@@ -13,6 +13,7 @@ $(document).ready(function () {
                 return response.json();
             } else {
                 console.log(response.status);
+                return;
             }
         })
         .then(function(data){
@@ -24,3 +25,10 @@ $(document).ready(function () {
         })
 })
 
+function clickedImage(e) { // This function will save the image URL into local storage
+    var clickedImage = $(e.target).attr("src"); // Saves the image url
+    localStorage.setItem("url", clickedImage); // Saves the url into local storage 
+    window.location.assign("mainpicture.html") // Redirects the page to mainpicture.html
+}
+
+img.on("click", clickedImage); // clickedImage() will run when the user clicks on a photo

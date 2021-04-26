@@ -12,6 +12,11 @@ input[type="search"] { /* This will make sure the input text box is aligned */
     height: 64px !important; /* or height of nav */
 }
 
+footer { /* This will make sure the footer is at the bottom of the screen */
+    position: fixed; /* sticky footer */
+    bottom: 0;
+    width: 100%;
+}
 
 
 
