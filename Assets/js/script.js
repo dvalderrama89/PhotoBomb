@@ -11,9 +11,9 @@ navForm.on("submit", function(e) { // Saves the user input from nav bar into loc
     var navSearch = $("#navSearch").val(); 
     localStorage.setItem("search", navSearch);
     if ( document.URL.includes("index.html") ) { // If the user is on index.html, it will redirect accordingly 
-        window.location.replace("pages/search.html");
+        window.location.assign("pages/search.html");
     } else {
-        window.location.replace("search.html"); 
+        window.location.assign("search.html"); 
     }
 })
 
@@ -22,9 +22,9 @@ sideNavForm.on("submit", function(e) { // Saves the user input from side bar int
     var sideSearch = $("#sideSearch").val(); 
     localStorage.setItem("search", sideSearch);
     if ( document.URL.includes("index.html") ) {
-        window.location.replace("pages/search.html");
+        window.location.assign("pages/search.html");
     } else {
-        window.location.replace("search.html");
+        window.location.assign("search.html");
     }
 })
 /* Need to add #navForm, #sideForm, #navSearch, #sideSearch IDs to all HTML pages */
