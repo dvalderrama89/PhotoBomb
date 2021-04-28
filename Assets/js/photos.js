@@ -66,7 +66,7 @@ $(document).on('click','#dislikeButton',function() {
 
 function fetchPhotos(slug) {
     let enc = "b2dLS1VTeUdSUWgtU2tVVnpqS1ByX0t5clZZM0Q3eS1GZElwNmV4VVdIQQ=="; // encoded api key
-    let apiURL = `https://api.unsplash.com/topics/${slug}/photos/?client_id=${atob(enc)}`;
+    let apiURL = `https://api.unsplash.com/topics/${slug}/photos/?client_id=${atob(enc)}&orientation=portrait`;
 
     // Checks local storage to see if we already have the photo URL saved and
     // skips the API call if we do
@@ -100,7 +100,7 @@ function fetchPhotos(slug) {
 
 // Makes the card element that contains the photo and like/dislike buttons and attaches them to the page
 function createImageElems(url, slug) {
-    let cardContainer = $("<div>").addClass("col offset-s6 offset-l6"); // offset is used to center the image
+    let cardContainer = $("<div>").addClass("col s12 m6 offset-m3"); // offset is used to center the image
 
     let cardElem = $("<div>").addClass("card");
     let imgContainer = $("<div>").addClass("card-image waves-effect waves-block waves-light");
