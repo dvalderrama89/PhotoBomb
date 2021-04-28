@@ -10,7 +10,7 @@ function getPhotos(e) { // This function will fetch the category's photos from U
     var category = $(e.target).text(); // Saves the category name 
     var enc = "b2dLS1VTeUdSUWgtU2tVVnpqS1ByX0t5clZZM0Q3eS1GZElwNmV4VVdIQQ==";
     var dec = atob(enc);
-    var apiUrl = "https://api.unsplash.com/photos/random?client_id=" + dec + "&count=20" + "&query=" + category;
+    var apiUrl = "https://api.unsplash.com/photos/random?client_id=" + dec + "&orientation=portrait&count=20" + "&query=" + category;
     // query= search term
     // count = will return 20 pictures
     fetch(apiUrl) 
