@@ -1,12 +1,24 @@
-#photoContainer > div {
-    width: 25%;
-    transform: translate(-50%, 0); /* Centers the images under the Photobomb title */
-}
-
 /* Prevents the Like/Dislike links going off of the card
     on smaller screens */
 @media only screen and (max-width: 750px) {
     #photoContainer > div {
         width: auto;
     }
+}
+
+#likeButton {
+    color: #0288d1;
+}
+
+#dislikeButton {
+    color: #0288d1;
+}
+
+#photoContainer {
+    height: 100vh;
+    margin-top: 5%;
+}
+
+img {
+    max-height: 550px;
 }
