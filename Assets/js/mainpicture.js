@@ -23,32 +23,32 @@ $(document).ready(function() {
 } )
 
 // Share button- Will use the attached API to create a shorter URL that the user can share.
-// $(document).ready(function() {
-//     $("#send-btn").click(function(event) {
-//         event.preventDefault();
-//         console.log("send button works");
-//         $(function() {
-//             const url = new URL("https://t.ly/api/v1/link/shorten");
-//             let headers = {
-//                 "Content-Type": "application/json",
-//                 "Accept": "application/json",
-//             }
-//             let body = {
-//                 "long_url": tempImg,
-//                 "domain": "https:\/\/t.ly\/",
-//                 "api_token": atob("TThyWlVFNWNnbXVLMzZkWmJlZlhXbW55a0Jpb1FHcXRaZjZwTDVoNG5WYXp3UG93Mlh1aHZFQ1Y2aHpt")
-//             }
-//             fetch(url, {
-//                 method: "POST",
-//                 headers: headers,
-//                 body: JSON.stringify(body)
-//             })
-//                 .then(response => response.json())
-//                 .then(json => console.log(json));
-//         });
-//     })
+$(document).ready(function() {
+    $("#send-btn").click(function(event) {
+        event.preventDefault();
+        console.log("send button works");
+        $(function() {
+            const url = new URL("https://t.ly/api/v1/link/shorten");
+            let headers = {
+                "Content-Type": "application/json",
+                "Accept": "application/json",
+            }
+            let body = {
+                "long_url": localStorage.getItem("url"),
+                "domain": "https:\/\/t.ly\/",
+                "api_token": atob("TThyWlVFNWNnbXVLMzZkWmJlZlhXbW55a0Jpb1FHcXRaZjZwTDVoNG5WYXp3UG93Mlh1aHZFQ1Y2aHpt")
+            }
+            fetch(url, {
+                method: "POST",
+                headers: headers,
+                body: JSON.stringify(body)
+            })
+                .then(response => response.json())
+                .then(json => console.log(json));
+        });
+    })
 
-// } )
+} )
 
  // Download button- Opens image in a separate window so the user can download.
 $(document).ready(function() {
