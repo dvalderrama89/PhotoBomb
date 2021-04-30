@@ -28,6 +28,6 @@ https://reddituser7777.github.io/group-project-1/
 * David Valderrama https://github.com/reddituser7777
 * Alex DaRe https://github.com/aldare93
 
-### Screenshot of deployed application 
+### Screenshot of deployed application:
 
 ![Screenshot](/Assets/photo-bomb-screenshot.png)
