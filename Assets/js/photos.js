@@ -74,7 +74,6 @@ function fetchPhotos(slug) {
     if (urlsObj) {
         let parsedObj = JSON.parse(urlsObj);
         if (parsedObj[slug] && parsedObj[slug].length > 0) {
-            console.log("already have the url for: ", slug);
             let cardElem = createImageElems(parsedObj[slug], slug);
             $("#photoContainer").append(cardElem);
             return;
@@ -84,7 +83,6 @@ function fetchPhotos(slug) {
     fetch(apiURL)
     .then(response => response.json())
     .then(data => {
-        console.log(data) // debug info
         if (data.length > 1) {
             for (let i = 0; i < 1; i++) {
                 let cardElem = createImageElems(data[i].urls.regular, slug);
