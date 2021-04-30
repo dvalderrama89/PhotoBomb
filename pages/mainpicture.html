@@ -51,17 +51,32 @@
               </form>
         </li>
     </ul>
+    <!-- Saved Image modal -->
+    <div id="savedModal" class="modal modal-saved">
+      <div class="modal-content">
+        <h4>Image saved!</h4>
+        <p>You can view this image and other saved images <a href="saved.html">here</a>!</p>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+      </div>
+    </div>
+
+    <!-- URL shortner modal -->
+    <div id="random"></div>
+    
+    </div>
     <div class="container mainPicture">
         <div class="row">
             <div class="col s12 m10 l8 xl8 offset-xl2 offset-l2 offset-m1">
               <div class="card">
                 <div class="card-image">
-                    <a class="btn-floating halfway-fab waves-effect waves-light red" id="like-btn"><i class="material-icons">add</i></a>
+                    <a class="btn-floating halfway-fab waves-effect waves-light red modal-trigger" data-target="savedModal" id="like-btn"><i class="material-icons">add</i></a> <!--Modal trigger and save button-->
                     <div id="image-zone"></div>
                 </div>
                 <div class="card-action">
                   <a href="" id="download-btn" target="_blank">Download this wallpaper</a>
-                  <a href="" id="send-btn" >Send this image to a friend</a>
+                  <a href="" id="send-btn" data-target="urlModal" class="modal-trigger">Send this image to a friend</a>
                 </div>
               </div>
             </div>
@@ -96,3 +111,10 @@
 </body>
 </html>
 
+<!-- <div id="savedModal" class="modal">
+
+  Modal content -->
+  <!-- <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>Picture saved to <a href="saved.html">Saved</a></p>
+  </div> -->
