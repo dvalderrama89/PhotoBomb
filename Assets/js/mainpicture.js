@@ -7,7 +7,7 @@ imgEl.append(tempImg);
 // Save button- Saves URL of image to local storage (under URL key). These images will populate the "saved" page.
 $(document).ready(function() {
     $("#like-btn").click(function(e) {
-        // console.log("like button works");
+        console.log("like button works");
         let currentUrl = $("#current-img").attr("src"); 
         let saveArr = JSON.parse(localStorage.getItem("Saved")) || [];
         console.log(saveArr);
@@ -22,11 +22,17 @@ $(document).ready(function() {
     })
 } )
 
+// Opens modal indicating image has been saved
+$(document).ready(function(){
+    $('.modal-saved').modal();
+  });
+
 // Share button- Will use the attached API to create a shorter URL that the user can share.
 $(document).ready(function() {
     $("#send-btn").click(function(event) {
         event.preventDefault();
         console.log("send button works");
+        let shortUrl = ""
         $(function() {
             const url = new URL("https://t.ly/api/v1/link/shorten");
             let headers = {
@@ -44,18 +50,25 @@ $(document).ready(function() {
                 body: JSON.stringify(body)
             })
                 .then(response => response.json())
-                .then(json => console.log(json))
-                // .then(res => { 
-                //     let card = $(`<div>`).addClass("card-body")
-                //     let shortUrl = $(text(res.short_url))
-                //     console.log(shortUrl)
-                //     card.append(shortUrl)
-                //     // $(`#new-url`).append(card)
-                } ) ;
+                .then(json => {
+                    shortUrl = json.short_url; // Opens modal with shortened URL
+                    console.log(json)
+                    console.log(shortUrl);
+                    // let modal = $(`<div>`).addClass("modal modal-url")
+                    // let modalContent = $(`<div>`).addClass("modal-content")
+                    // let shortenedUrl = $(`<p>`).addClass("short-url").text(`${shortUrl}`)
+                    // let modalFooter = $(`<div>`).addClass("modal-footer")
+                    // let modalFooterContent = $(`<a>`).attr("href", "#!").addClass("modal-close waves-effect waves-green btn-flat").text("Close")
+                    // modalFooter.append(modalFooterContent)
+                    // $("#random").append(modal,modalContent,shortenedUrl,modalFooter,modalFooterContent).modal();
+                    alert(`Here's your shortend URL: ${shortUrl} `) //Alert that opens upon with shortened URL
+                })
+            } ) ;
+            
+            
         } ) ;
     })
 
-// } )
 
  // Download button- Opens image in a separate window so the user can download.
 $(document).ready(function() {
