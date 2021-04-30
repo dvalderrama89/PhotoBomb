@@ -1,8 +1,8 @@
     // Pulls image from local storage (under key "URL") and fills in "#image-zone".
-    let imgArr = localStorage.getItem("url");
-    let imgEl = $(`#image-zone`);
-    let tempImg = $(`<img>`).attr(`src`, imgArr).addClass('tempImg').attr(`id`, `current-img`);
-        imgEl.append(tempImg);
+let imgArr = localStorage.getItem("url");
+let imgEl = $(`#image-zone`);
+let tempImg = $(`<img>`).attr(`src`, imgArr).addClass('tempImg').attr(`id`, `current-img`);
+imgEl.append(tempImg);
 
 // Save button- Saves URL of image to local storage (under URL key). These images will populate the "saved" page.
 $(document).ready(function() {
@@ -44,11 +44,18 @@ $(document).ready(function() {
                 body: JSON.stringify(body)
             })
                 .then(response => response.json())
-                .then(json => console.log(json));
-        });
+                .then(json => console.log(json))
+                // .then(res => { 
+                //     let card = $(`<div>`).addClass("card-body")
+                //     let shortUrl = $(text(res.short_url))
+                //     console.log(shortUrl)
+                //     card.append(shortUrl)
+                //     // $(`#new-url`).append(card)
+                } ) ;
+        } ) ;
     })
 
-} )
+// } )
 
  // Download button- Opens image in a separate window so the user can download.
 $(document).ready(function() {

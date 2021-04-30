@@ -15,6 +15,3 @@ $(".tempImg").click(function(event) { //click event
     console.log($(event.target).attr(`src`));
     window.location.assign("mainpicture.html") // redirects to mainpicture.html
 })
-
-// var clickedImage = $(e.target).attr("src"); // Saves the image url
-//     localStorage.setItem("url", clickedImage);
