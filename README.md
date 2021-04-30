@@ -13,7 +13,7 @@ to the 'saved' tab.
 
 ### Link to deployed application:
 
-https://reddituser7777.github.io/group-project-1/
+https://reddituser7777.github.io/PhotoBomb/
 
 ### Technologies used:
 
