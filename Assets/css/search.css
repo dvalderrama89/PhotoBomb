@@ -1,0 +1,8 @@
+.title {
+    font-size: 25px; /* This will style the Categories title */
+    font-weight: bold;
+}
+
+img:hover { /* Pointer for when the user hovers over an image */
+    cursor: pointer;
+}

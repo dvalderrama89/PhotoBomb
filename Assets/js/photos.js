@@ -15,11 +15,11 @@ All slugs
  */
 var slugs = ["nature", "people", "architecture", "fashion", "film"];
 var categoryWeights = {
-    "nature": 100,
-    "people": 100,
-    "architecture": 100,
-    "fashion": 100,
-    "film": 100
+    nature: 100,
+    people: 100,
+    architecture: 100,
+    fashion: 100,
+    film: 100
 }
 var photoURLs = {
     "nature": "",
@@ -66,7 +66,7 @@ $(document).on('click','#dislikeButton',function() {
 
 function fetchPhotos(slug) {
     let enc = "b2dLS1VTeUdSUWgtU2tVVnpqS1ByX0t5clZZM0Q3eS1GZElwNmV4VVdIQQ=="; // encoded api key
-    let apiURL = `https://api.unsplash.com/topics/${slug}/photos/?client_id=${atob(enc)}`;
+    let apiURL = `https://api.unsplash.com/topics/${slug}/photos/?client_id=${atob(enc)}&orientation=portrait`;
 
     // Checks local storage to see if we already have the photo URL saved and
     // skips the API call if we do
@@ -74,7 +74,6 @@ function fetchPhotos(slug) {
     if (urlsObj) {
         let parsedObj = JSON.parse(urlsObj);
         if (parsedObj[slug] && parsedObj[slug].length > 0) {
-            console.log("already have the url for: ", slug);
             let cardElem = createImageElems(parsedObj[slug], slug);
             $("#photoContainer").append(cardElem);
             return;
@@ -84,7 +83,6 @@ function fetchPhotos(slug) {
     fetch(apiURL)
     .then(response => response.json())
     .then(data => {
-        console.log(data) // debug info
         if (data.length > 1) {
             for (let i = 0; i < 1; i++) {
                 let cardElem = createImageElems(data[i].urls.regular, slug);
@@ -100,7 +98,7 @@ function fetchPhotos(slug) {
 
 // Makes the card element that contains the photo and like/dislike buttons and attaches them to the page
 function createImageElems(url, slug) {
-    let cardContainer = $("<div>").addClass("col offset-s6 offset-l6"); // offset is used to center the image
+    let cardContainer = $("<div>").addClass("col s12 m6 offset-m3"); // offset is used to center the image
 
     let cardElem = $("<div>").addClass("card");
     let imgContainer = $("<div>").addClass("card-image waves-effect waves-block waves-light");

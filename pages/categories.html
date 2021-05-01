@@ -20,12 +20,12 @@
           <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
           <ul class="right hide-on-med-and-down">
             <li><a class="waves-effect black-text" href="categories.html">Categories</a></li>
-            <li><a class="waves-effect black-text" href="#">Likes</a></li>
-            <li><a class="waves-effect black-text" href="#">Curated</a></li>
+            <li><a class="waves-effect black-text" href="saved.html">Saved</a></li>
+            <li><a class="waves-effect black-text" href="curated.html">Curated</a></li>
             <li>
-                <form> <!-- This text box NEEDS the styling on the CSS page to be aligned -->
+                <form id="navForm"> <!-- This text box NEEDS the styling on the CSS page to be aligned -->
                     <div class="input-field">
-                      <input class= "search-bar" type="search" placeholder="Search"required>
+                      <input id="navSearch" class= "search-bar" type="search" placeholder="Search"required>
                       <label class="label-icon" for="search"><i class="material-icons black-text">search</i></label>
                       <i class="material-icons">close</i>
                     </div>
@@ -38,12 +38,12 @@
         <li><a class="subheader">PhotoBomb</a></li>
         <li><div class="divider"></div></li>
         <li><a class="waves-effect" href="categories.html">Categories</a></li>
-        <li><a class="waves-effect" href="#">Likes</a></li>
-        <li><a class="waves-effect" href="#">Curated</a></li>
+        <li><a class="waves-effect" href="saved.html">Saved</a></li>
+        <li><a class="waves-effect" href="curated.html">Curated</a></li>
         <li>
-            <form> 
+            <form id="sideForm"> 
                 <div class="input-field">
-                  <input class= "search-bar" type="search"required>
+                  <input id="sideSearch" class= "search-bar" type="search"required>
                   <label class="label-icon" for="search"><i class="material-icons black-text">search</i></label>
                   <i class="material-icons">close</i>
                 </div>
@@ -99,6 +99,13 @@
             <div class="col s12 m3"><img src="" class="19 responsive-img"></div>
         </div>
     </div>
+    <footer class="page-footer blue-grey lighten-5"> <!-- Footer -->
+        <div class="footer-copyright">
+            <div class="container black-text center">
+                © 2021 PhotoBomb
+            </div>
+        </div>
+    </footer>
     <!-- JQUERY link and Materialize JS link -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src = "https://code.jquery.com/jquery-3.5.1.min.js"></script>

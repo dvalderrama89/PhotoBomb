@@ -12,6 +12,57 @@ input[type="search"] { /* This will make sure the input text box is aligned */
     height: 64px !important; /* or height of nav */
 }
 
+footer { /* This will make sure the footer is at the bottom of the screen */
+    position: fixed; /* sticky footer */
+    bottom: 0;
+    width: 100%;
+}
+
+.sidenav li {
+    margin-top: 5%; /* Spaces out the nav bar */
+}
+
+.responsive-img:hover {  /* Image filter on hover */
+    filter: grayscale(50%);
+    opacity: .5;
+    transform: translateY(-2%);
+}
+
+.brand-logo { /* This will give the logo a transition when hovered on */
+    transition-property: all; 
+    transition-duration: .8s; 
+    transition-timing-function: ease; 
+}
+
+.brand-logo:hover,         
+.brand-logo:active {                            
+    letter-spacing: 5px;
+}
+
+.brand-logo:after,
+.hero-text:before {
+    backface-visibility: hidden;
+    bottom: 0px;
+    content: " ";
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    transition: all 280ms ease-in-out;
+    width: 0;
+}
+
+.brand-logo:hover:after,
+.brand-logo:hover:before {
+    backface-visibility: hidden;
+    transition: width 350ms ease-in-out;
+    width: 70%;
+}
+
+.brand-logo:hover:before {
+    bottom: auto;
+    top: 0;
+    width: 70%;
+}
 
 
 

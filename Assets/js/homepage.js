@@ -10,7 +10,6 @@ M.Slider.init(slider, {
 
 startBtn.on("click", function(e) { // When the user clicks on the Get Started button
   e.preventDefault();
-  console.log("Start button works."); 
-  window.location.replace("pages/photos.html"); // The page will redirect to photos.html
+  window.location.assign("pages/photos.html"); // The page will redirect to photos.html
 })
 
