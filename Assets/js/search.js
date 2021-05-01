@@ -6,7 +6,7 @@ $(document).ready(function () {
     console.log(search);
     var enc = "b2dLS1VTeUdSUWgtU2tVVnpqS1ByX0t5clZZM0Q3eS1GZElwNmV4VVdIQQ==";
     var dec = atob(enc);
-    var apiUrl = "https://api.unsplash.com/photos/random?&client_id=" + dec + "&orientation=portrait&count=20" + "&query=" + search;
+    var apiUrl = "https://api.unsplash.com/photos/random?&client_id=" + dec + "&orientation=squarish&count=20" + "&query=" + search;
     fetch(apiUrl)
         .then(function(response) {
             if(response.ok) {
