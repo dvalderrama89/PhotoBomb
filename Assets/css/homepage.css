@@ -1,3 +1,41 @@
+
+i {
+    padding-bottom: 10%;
+}
+
+.intro-text {
+    font-size: 15px;
+    font-weight: 900;
+}
+
+.card-container p {
+    margin: 5%;
+}
+
+.main-container{
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-container {
+    min-height: 10vh;
+}
+
+.button-container { 
+    width: 100%;
+    min-height: 10vh;
+}
+
+.slider-container {
+    min-height: 30vh; 
+}
+
+.card-container {
+    min-height: 50vh;
+}
+
 button {
     outline: none;
     border: none;

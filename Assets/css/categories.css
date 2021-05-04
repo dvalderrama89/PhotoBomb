@@ -13,6 +13,7 @@ input[type="search"] { /* This will make sure the input text box is aligned */
     width: 100%;
     justify-content: center;
     text-align: center;
+    padding-top: 5%;
 }
 
 .categories-list ul { /* This will turn the list into a flexbox */

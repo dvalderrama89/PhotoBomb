@@ -14,84 +14,124 @@
     <link rel="stylesheet" href= "Assets/css/homepage.css" />
 </head>
 <body>
-    <nav> <!-- This nav bar will show fully on lg screens, and will be mobile-responsive on sml screens -->
-        <div class="nav-wrapper blue-grey lighten-5 navbar-fixed">
-          <a href="index.html" class="brand-logo black-text center">PhotoBomb</a>
-          <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-          <ul class="right hide-on-med-and-down">
-            <li><a class="waves-effect black-text" href="pages/categories.html">Categories</a></li>
-            <li><a class="waves-effect black-text" href="pages/saved.html">Saved</a></li>
-            <li><a class="waves-effect black-text" href="pages/curated.html">Curated</a></li>
-            <li>
+
+  <div class="main-container">
+    <div class="nav-container">
+      <nav> <!-- This nav bar will show fully on lg screens, and will be mobile-responsive on sml screens -->
+          <div class="nav-wrapper blue-grey lighten-5 navbar-fixed">
+            <a href="index.html" class="brand-logo black-text center">PhotoBomb</a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+              <li><a class="waves-effect black-text" href="pages/categories.html">Categories</a></li>
+              <li><a class="waves-effect black-text" href="pages/saved.html">Saved</a></li>
+              <li><a class="waves-effect black-text" href="pages/curated.html">Curated</a></li>
+              <li>
                 <form id="navForm"> <!-- This text box NEEDS the styling on the CSS page to be aligned -->
-                    <div class="input-field">
-                      <input id="navSearch" class="search-bar" type="search" placeholder="Search"required>
-                      <label class="label-icon" for="search"><i class="material-icons black-text">search</i></label>
-                      <i class="material-icons">close</i>
+                  <div class="input-field">
+                    <input id="navSearch" class="search-bar" type="search" placeholder="Search"required>
+                    <label class="label-icon" for="search"><i class="material-icons black-text">search</i></label>
+                    <i class="material-icons">close</i>
                     </div>
-                  </form>
-            </li>
-          </ul>
-        </div>
-    </nav>
-    <ul class="sidenav" id="mobile-demo"> <!-- This is the side nav that will show on sml screens  -->
+                </form>
+              </li>
+            </ul>
+          </div>
+      </nav>
+      <ul class="sidenav" id="mobile-demo"> <!-- This is the side nav that will show on sml screens  -->
         <li><a class="subheader">PhotoBomb</a></li>
         <li><div class="divider"></div></li>
         <li><a class="waves-effect" href="pages/categories.html">Categories</a></li>
         <li><a class="waves-effect" href="pages/saved.html">Saved</a></li>
         <li><a class="waves-effect" href="pages/curated.html">Curated</a></li>
         <li>
-            <form id="sideForm"> 
-                <div class="input-field">
-                  <input id="sideSearch" class="search-bar" type="search"required>
-                  <label class="label-icon" for="search"><i class="material-icons black-text">search</i></label>
-                  <i class="material-icons">close</i>
-                </div>
-              </form>
+          <form id="sideForm"> 
+            <div class="input-field">
+              <input id="sideSearch" class="search-bar" type="search"required>
+              <label class="label-icon" for="search"><i class="material-icons black-text">search</i></label>
+              <i class="material-icons">close</i>
+            </div>
+          </form>
         </li>
-    </ul>
-    <div class="button-location"> <!-- This will hold the Get Started button -->
-        <div class="container">
-          <div class='row center-align'>
-              <button type="button" class="start-btn">Get Started</button>
-          </div>
-        </div>
+      </ul>
+    </div>
+    <div class="button-container"> <!-- This will hold the Get Started button -->
+      <div class='intro-text row center-align'>
+        <h1>Welcome to PhotoBomb! A personalized wallpaper app.</h1>
+        <h2>HOW TO GET STARTED: Click the button to start a quick assessment to get curated wallpapers for you. </h2>
+      </div>
+      <div class='row center-align'>
+        <button type="button" class="start-btn">Get Started</button>
+      </div>
     </div>
     <!-- Main slider showing photos -->
-    <div class="slider">
+    <div class="slider-container">
+      <div class="slider">
         <ul class="slides">
           <li>
-              <img src="https://images.pexels.com/photos/2885320/pexels-photo-2885320.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Placeholder">
-              <div class="caption center-align">
-                <h1>Find Your Perfect Wallpaper</h1>
-              </div>
+            <img src="https://images.pexels.com/photos/2885320/pexels-photo-2885320.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Placeholder">
+            <div class="caption center-align">
+              <h1>Find Your Perfect Wallpaper</h1>
+            </div>
           </li>
           <li>
-              <img src="https://images.pexels.com/photos/2835436/pexels-photo-2835436.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Placeholder">
-              <div class="caption center-align">
-                <h1>Curated For You</h1>
-              </div>
+            <img src="https://images.pexels.com/photos/2835436/pexels-photo-2835436.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Placeholder">
+            <div class="caption center-align">
+              <h1>Curated For You</h1>
+            </div>
           </li>
           <li>
-              <img src="https://images.pexels.com/photos/4245826/pexels-photo-4245826.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Placeholder">
-              <div class="caption center-align">
-                <h1>Click The Button To Get Started</h1>
-              </div>
+            <img src="https://images.pexels.com/photos/4245826/pexels-photo-4245826.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Placeholder">
+            <div class="caption center-align">
+              <h1>Click The Button To Get Started</h1>
+            </div>
           </li>
         </ul>
-    </div> 
-    <footer class="page-footer blue-grey lighten-5"> <!-- Footer -->
-      <div class="footer-copyright">
-          <div class="container black-text center">
-              © 2021 PhotoBomb
+      </div> 
+    </div>
+    <div class="card-container">
+      <section class="section section-icons grey lighten-4 center">
+        <div class="row">
+          <div class="col s12 m4 hoverable">
+            <div class="card-panel card large">
+              <i class="material-icons large">format_list_bulleted</i>
+              <h4>Categories</h4>
+              <p>If you already know what you're looking for, search through our Categories tab to get started.</p>
+              <p>We've pre-selected the most popular categories for you!</p>
+            </div>
           </div>
+          <div class="col s12 m4 hoverable">
+            <div class="card-panel card large">
+              <i class="material-icons large">bookmark</i>
+              <h4>Saved</h4>
+              <p>You can save photos you like and it will show up in our Saved tab!</p>
+              <p>You can also download + send pictures on your device!</p>
+            </div>
+          </div>
+          <div class="col s12 m4 hoverable">
+            <div class="card-panel card large">
+              <i class="material-icons large">wallpaper</i>
+              <h4>Curated</h4>
+              <p>Can't choose?</p>
+              <p>Go through our quick and easy assessment and your curated wallpapers 
+              will show up in the Curated tab!</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <footer class="page-footer blue-grey lighten-5"> <!-- Footer -->
+    <div class="footer-copyright">
+      <div class="container black-text center">
+          © 2021 PhotoBomb
       </div>
+    </div>
     </footer>
-    <!-- JQUERY link and Materialize JS link -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src = "https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src = "Assets/js/script.js"></script>
-    <script src = "Assets/js/homepage.js"></script>
+
+  <!-- JQUERY link and Materialize JS link -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src = "https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src = "Assets/js/script.js"></script>
+  <script src = "Assets/js/homepage.js"></script>
 </body>
 </html>
