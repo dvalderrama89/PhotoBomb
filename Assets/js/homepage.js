@@ -3,7 +3,6 @@ var startBtn = $(".start-btn"); // Targets the start button
 var slider = $(".slider"); /* Initializes the main slider with these options */
 M.Slider.init(slider, {
     indicators: false,
-    height: 600,
     transition: 500,
     interval: 3000,
 });
