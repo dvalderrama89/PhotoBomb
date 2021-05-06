@@ -30,4 +30,4 @@ https://reddituser7777.github.io/PhotoBomb/index.html
 
 ### Screenshot of deployed application:
 
-![Screenshot](/Assets/photo-bomb-screenshot.png)
+![Screenshot](/Assets/updated-screenshot.png)
