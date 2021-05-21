@@ -1,3 +1,4 @@
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 ## UCI Group Project 1: PhotoBomb Application 
 
 This repository contains a mobile-first UI application made for mobile/desktop users who are looking for a
@@ -31,3 +32,7 @@ https://reddituser7777.github.io/PhotoBomb/index.html
 ### Screenshot of deployed application:
 
 ![Screenshot](/Assets/updated-screenshot.png)
+
+### License 
+
+MIT 
