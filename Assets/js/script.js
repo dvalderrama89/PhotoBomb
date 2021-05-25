@@ -1,6 +1,6 @@
 /* Global script */
-var navForm =  $("#navForm"); // Targets the nav form
-var sideNavForm = $("#sideForm") // Targets the side form 
+let navForm =  $("#navForm"); // Targets the nav form
+let sideNavForm = $("#sideForm") // Targets the side form 
 
 $(document).ready(function(){ /* Initializes the side nav bar */
     $('.sidenav').sidenav();
@@ -8,7 +8,7 @@ $(document).ready(function(){ /* Initializes the side nav bar */
 
 navForm.on("submit", function(e) { // Saves the user input from nav bar into local storage and redirects screen 
     e.preventDefault();
-    var navSearch = $("#navSearch").val(); 
+    let navSearch = $("#navSearch").val(); 
     localStorage.setItem("search", navSearch);
     if ( document.URL.includes("index.html") ) { // If the user is on index.html, it will redirect accordingly 
         window.location.assign("pages/search.html");
@@ -19,7 +19,7 @@ navForm.on("submit", function(e) { // Saves the user input from nav bar into loc
 
 sideNavForm.on("submit", function(e) { // Saves the user input from side bar into local storage and redirects screen
     e.preventDefault();
-    var sideSearch = $("#sideSearch").val(); 
+    let sideSearch = $("#sideSearch").val(); 
     localStorage.setItem("search", sideSearch);
     if ( document.URL.includes("index.html") ) {
         window.location.assign("pages/search.html");
